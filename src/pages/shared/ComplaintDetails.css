@@ -1,0 +1,113 @@
+.complaint-details { display: flex; flex-direction: column; gap: var(--space-4); max-width: 1100px; }
+
+.complaint-details__back {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary);
+  font-size: var(--fs-sm);
+  font-weight: 600;
+}
+.complaint-details__back:hover { color: var(--color-text-primary); }
+
+.complaint-details__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+}
+.complaint-details__header h1 { font-size: var(--fs-xl); margin-top: 2px; }
+
+.complaint-details__badges { display: flex; align-items: center; gap: 10px; margin-top: 10px; flex-wrap: wrap; }
+.complaint-details__category {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--fs-xs);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.complaint-details__rejected {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: var(--color-danger-light);
+  border-color: transparent;
+}
+.complaint-details__rejected svg { font-size: 1.4rem; color: var(--color-danger); flex-shrink: 0; margin-top: 2px; }
+.complaint-details__rejected strong { color: #991b1b; }
+.complaint-details__rejected p { margin-top: 4px; color: #991b1b; }
+
+.complaint-details__hold-note {
+  margin-top: var(--space-4);
+  color: var(--color-warning);
+  font-weight: 600;
+}
+
+.complaint-details__grid {
+  display: grid;
+  grid-template-columns: 1fr 320px;
+  gap: var(--space-4);
+  align-items: start;
+}
+
+.complaint-details__main { display: flex; flex-direction: column; gap: var(--space-4); }
+.complaint-details__side { display: flex; flex-direction: column; gap: var(--space-4); position: sticky; top: calc(var(--topbar-height) + 16px); }
+
+.complaint-details__meta {
+  display: flex;
+  gap: var(--space-4);
+  margin-top: var(--space-3);
+  flex-wrap: wrap;
+}
+.complaint-details__meta span { display: flex; align-items: center; gap: 6px; font-size: var(--fs-xs); color: var(--color-text-secondary); }
+
+.complaint-details__images { display: flex; gap: 10px; margin-top: var(--space-3); flex-wrap: wrap; }
+.complaint-details__image-ph {
+  width: 96px;
+  height: 96px;
+  border-radius: var(--radius-sm);
+  border: 1px dashed var(--color-border);
+  background: var(--color-bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  color: var(--color-text-secondary);
+  font-size: 10px;
+  text-align: center;
+  padding: 4px;
+}
+.complaint-details__image-ph svg { font-size: 1.2rem; }
+
+.complaint-details__comments { display: flex; flex-direction: column; gap: var(--space-3); margin-top: var(--space-3); }
+.complaint-details__comment { display: flex; gap: 10px; }
+.complaint-details__comment-head { display: flex; align-items: baseline; gap: 8px; }
+.complaint-details__comment-head time { font-size: 10px; color: var(--color-text-secondary); }
+.complaint-details__comment p { font-size: var(--fs-sm); color: var(--color-text-primary); margin-top: 1px; }
+
+.complaint-details__comment-form { display: flex; gap: 10px; margin-top: var(--space-4); }
+.complaint-details__comment-form input { flex: 1; height: 42px; }
+
+.complaint-details__rating { display: flex; gap: 4px; margin-block: 10px 12px; }
+.complaint-details__rating button { background: none; border: none; font-size: 1.4rem; color: var(--color-border); }
+
+.complaint-details__person { display: flex; align-items: center; gap: 12px; padding-block: var(--space-3); border-top: 1px solid var(--color-border); }
+.complaint-details__person:first-of-type { border-top: none; padding-top: 0; }
+.complaint-details__person span { display: block; }
+.complaint-details__person strong { font-size: var(--fs-sm); }
+
+.complaint-details__unassigned {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--color-bg); border: 1px dashed var(--color-border);
+  display: flex; align-items: center; justify-content: center;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 900px) {
+  .complaint-details__grid { grid-template-columns: 1fr; }
+  .complaint-details__side { position: static; }
+}

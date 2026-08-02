@@ -1,0 +1,97 @@
+.auth-form {
+  width: 100%;
+  max-width: 420px;
+}
+
+.auth-form h1 { font-size: var(--fs-2xl); }
+
+.auth-form__subtitle {
+  margin-top: 6px;
+  margin-bottom: var(--space-5);
+}
+
+.auth-form form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.auth-form__row {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: -8px;
+}
+
+.auth-form__link { font-size: var(--fs-sm); font-weight: 600; }
+
+.auth-form__error {
+  background: var(--color-danger-light);
+  color: #991b1b;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: var(--fs-sm);
+}
+
+.auth-form__success {
+  background: var(--color-success-light);
+  color: #166534;
+  border-radius: var(--radius-sm);
+  padding: 10px 12px;
+  font-size: var(--fs-sm);
+}
+
+.auth-form__divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-block: var(--space-5);
+  color: var(--color-text-secondary);
+  font-size: var(--fs-xs);
+}
+.auth-form__divider::before,
+.auth-form__divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: var(--color-border);
+}
+
+.auth-form__demo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-2);
+}
+
+.auth-form__demo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 3px;
+  padding: var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-surface);
+  text-align: left;
+}
+.auth-form__demo-btn:hover { border-color: var(--color-primary); background: var(--color-primary-light); }
+.auth-form__demo-btn strong { font-size: var(--fs-xs); color: var(--color-primary); text-transform: uppercase; letter-spacing: 0.03em; }
+.auth-form__demo-btn span { font-size: var(--fs-sm); font-weight: 600; }
+
+.auth-form__demo-btn code,
+.auth-form p code {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+.auth-form__footer {
+  text-align: center;
+  margin-top: var(--space-5);
+  font-size: var(--fs-sm);
+}
+.auth-form__footer a { font-weight: 600; }
+
+@media (max-width: 420px) {
+  .auth-form__demo { grid-template-columns: 1fr; }
+}

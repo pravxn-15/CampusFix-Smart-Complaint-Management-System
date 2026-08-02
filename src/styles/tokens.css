@@ -1,0 +1,114 @@
+:root {
+  /* ---------- Brand palette (fixed per spec) ---------- */
+  --color-primary: #2563eb;
+  --color-primary-dark: #1d4ed8;
+  --color-primary-light: #dbeafe;
+  --color-secondary: #0f172a;
+  --color-accent: #f59e0b;
+  --color-accent-light: #fef3c7;
+
+  --color-success: #22c55e;
+  --color-success-light: #dcfce7;
+  --color-warning: #f97316;
+  --color-warning-light: #ffedd5;
+  --color-danger: #ef4444;
+  --color-danger-light: #fee2e2;
+  --color-info: #2563eb;
+
+  --color-bg: #f8fafc;
+  --color-surface: #ffffff;
+  --color-border: #e5e7eb;
+  --color-text-primary: #111827;
+  --color-text-secondary: #6b7280;
+  --color-text-inverse: #f8fafc;
+
+  /* Role accents — one quiet signature that tells you which portal you're in */
+  --role-user: var(--color-primary);
+  --role-staff: var(--color-accent);
+  --role-admin: var(--color-secondary);
+
+  /* ---------- Typography ---------- */
+  --font-display: "Poppins", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, -apple-system, sans-serif;
+
+  --fs-xs: 0.75rem;   /* 12px */
+  --fs-sm: 0.8125rem; /* 13px */
+  --fs-base: 0.9375rem; /* 15px */
+  --fs-md: 1.0625rem; /* 17px */
+  --fs-lg: 1.25rem;   /* 20px */
+  --fs-xl: 1.625rem;  /* 26px */
+  --fs-2xl: 2.0625rem; /* 33px */
+  --fs-3xl: 2.75rem;  /* 44px */
+
+  /* ---------- 8px spacing grid ---------- */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 40px;
+  --space-7: 48px;
+  --space-8: 64px;
+  --space-9: 80px;
+
+  /* ---------- Radius ---------- */
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --radius-full: 999px;
+
+  /* ---------- Shadows (soft, layered) ---------- */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 10px rgba(15, 23, 42, 0.05);
+  --shadow-md: 0 2px 4px rgba(15, 23, 42, 0.04), 0 10px 24px rgba(15, 23, 42, 0.08);
+  --shadow-lg: 0 8px 16px rgba(15, 23, 42, 0.06), 0 24px 48px rgba(15, 23, 42, 0.12);
+  --shadow-focus: 0 0 0 3px rgba(37, 99, 235, 0.28);
+
+  /* ---------- Glass (used sparingly — hero/auth surfaces only) ---------- */
+  --glass-bg: rgba(255, 255, 255, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.5);
+  --glass-blur: blur(20px);
+
+  /* ---------- Motion ---------- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 400ms;
+
+  /* ---------- Layout ---------- */
+  --sidebar-width: 264px;
+  --sidebar-width-collapsed: 84px;
+  --topbar-height: 72px;
+  --container-max: 1280px;
+}
+
+[data-theme="dark"] {
+  --color-bg: #0b1220;
+  --color-surface: #111827;
+  --color-border: #1f2937;
+  --color-text-primary: #f1f5f9;
+  --color-text-secondary: #94a3b8;
+  --color-primary-light: #1e3a5f;
+  --color-accent-light: #4a3412;
+  --color-success-light: #143521;
+  --color-warning-light: #402410;
+  --color-danger-light: #401616;
+
+  --glass-bg: rgba(17, 24, 39, 0.6);
+  --glass-border: rgba(255, 255, 255, 0.08);
+
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.24), 0 4px 10px rgba(0, 0, 0, 0.24);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.24), 0 10px 24px rgba(0, 0, 0, 0.32);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.32), 0 24px 48px rgba(0, 0, 0, 0.4);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

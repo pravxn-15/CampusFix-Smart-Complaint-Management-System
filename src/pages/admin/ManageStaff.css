@@ -1,0 +1,78 @@
+.manage-staff__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--space-4);
+}
+
+.manage-staff__card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.manage-staff__delete {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+  color: var(--color-text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.manage-staff__delete:hover { color: var(--color-danger); border-color: var(--color-danger); }
+
+.manage-staff__card h4 { margin-top: var(--space-3); }
+
+.manage-staff__tags { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; margin-top: var(--space-3); }
+.manage-staff__tag {
+  font-size: 10px;
+  font-weight: 600;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  padding: 3px 9px;
+  color: var(--color-text-secondary);
+}
+
+.manage-staff__stats {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: var(--space-4);
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+.manage-staff__stats strong { display: block; font-family: var(--font-display); font-size: var(--fs-md); }
+.manage-staff__stats span { font-size: 10px; color: var(--color-text-secondary); }
+
+.manage-staff__checkbox-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-top: 8px;
+}
+.manage-staff__checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: var(--fs-sm);
+  padding: 8px 10px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+}
+.manage-staff__checkbox input { accent-color: var(--color-primary); width: 16px; height: 16px; }
+
+@media (max-width: 1100px) {
+  .manage-staff__grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .manage-staff__grid { grid-template-columns: 1fr; }
+  .manage-staff__checkbox-grid { grid-template-columns: 1fr; }
+}

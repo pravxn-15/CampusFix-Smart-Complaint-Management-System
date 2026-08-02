@@ -1,0 +1,33 @@
+{
+  "name": "campusfix-frontend",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "CampusFix — Smart Complaint Management System for colleges & universities (frontend)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.26.2",
+    "axios": "^1.7.7",
+    "framer-motion": "^11.11.9",
+    "react-icons": "^5.3.0",
+    "react-toastify": "^10.0.6",
+    "react-hook-form": "^7.53.1",
+    "chart.js": "^4.4.4",
+    "react-chartjs-2": "^5.2.0",
+    "socket.io-client": "^4.8.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.2",
+    "vite": "^5.4.8",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-react-hooks": "^4.6.2"
+  }
+}
